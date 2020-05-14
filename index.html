@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="js/angular.min.js"></script>
+    	<script src="js/angular-route.min.js"></script>
+    	<script src="js/app.js"></script>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">				
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#!" style="font-family: forte;font-size: 40px;">Vencii</a>
+				</div>				
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">						
+						<li class="active"><a href="#!">Trang chủ</a></li>
+						<li><a href="#!gioithieu">Giới thiệu</a></li>
+						<li><a href="#!dangnhap">Đăng nhập</a></li>
+						<li><a href="#!sanpham">Sản phẩm</a></li>
+						<li><a href="#!dangky">Đăng ký</a></li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Tìm kiếm">
+						</div>
+						<button style="background-color: black;color: white;border: 0;padding: 5px;" type="button">Tìm kiếm</button>		
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="https://www.instagram.com/vencii.store/"><img src="Images/iconistagram.jpg" alt="" width="25px"></a></li>
+						<li><a href="https://www.facebook.com/Venciistore"><img src="Images/iconFB.png" alt="" width="25px"></a></li>
+						<li><a href="#modal-cart"><img src="Images/iconshopping.png" alt="" width="25px"></a></li>						
+					</ul>
+				</div>
+			</div>
+		</nav>		
+		<div class="container">       
+       		<ng-view></ng-view>
+   		</div>
+   		<div class="container-fluid" style="background-color: black;text-align: center;color:White;">
+   			<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+						
+					<ul class="list-unstyled quick-links">
+						<li><a href="#!"><i class="fa fa-angle-double-right"></i>Trang chủ</a></li>
+						<li><a href="#!gioithieu"><i class="fa fa-angle-double-right"></i>Giới thiệu</a></li>
+						<li><a href="#!giohang"><i class="fa fa-angle-double-right"></i>Giỏ hàng</a></li>
+						<li><a href="#!dangnhap"><i class="fa fa-angle-double-right"></i>Đăng nhập</a></li>
+						<li><a href="#!dangki"><i class="fa fa-angle-double-right"></i>Đăng ký</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					
+					<ul class="list-unstyled quick-links">
+						<li><a href=""><i class="fa fa-angle-double-right"></i>Quần Jean</a></li>
+						<li><a href=""><i class="fa fa-angle-double-right"></i>Áo Hoodie</a></li>
+						<li><a href=""><i class="fa fa-angle-double-right"></i>Áo Short-Tee</a></li>
+						<li><a href=""><i class="fa fa-angle-double-right"></i>Áo Bomber</a></li>
+						<li><a href=""><i class="fa fa-angle-double-right"></i>Mũ Snapback</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					
+					<ul class="list-unstyled quick-links">
+						<li><a href=""></sapve><i class="fa fa-angle-double-right"></i>Sắp về</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Mới nhất</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Hot nhất</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Hàng order</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Hết hàng</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="https://www.facebook.com/Venciistore;"><i class="fa fa-facebook"></i></a></li>		
+						<li class="list-inline-item"><a href="https://www.instagram.com/vencii.store/"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						
+					</ul>
+				</div>
+				</hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="index.html">Vencii</a></u> is a new local brand in Vietnam. No copyright the products of Vencii. </p>
+					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="index.html" target="_blank">Vencii</a></p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
+   		</div>		
+		<script src="//code.jquery.com/jquery.js"></script>		
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 		
+	</body>
+</html>

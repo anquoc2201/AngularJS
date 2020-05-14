@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name" : "Quần Jeans Zip",
+        "price": 100000,
+        "image":"Images/jeanspant/1.png"
+    },
+    {
+        "id":2,
+        "name" : "Quần Jeans không Zip",
+        "price": 200000,
+        "image":"Images/jeanspant/2.png"
+    },
+    {
+        "id":3,
+        "name" : "Quần Jeans 1 vạch",
+        "price": 300000,
+        "image":"Images/jeanspant/3.png"
+    }    
+]

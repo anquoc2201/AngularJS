@@ -1,0 +1,81 @@
+<div class="col-md-6">
+		<form action="" method="POST" role="form" name="Myf">
+			<legend>Đăng ký</legend>
+
+			<div class="form-group">
+				<label for="">Họ tên</label>
+				<input type="text" class="form-control" id="" placeholder="Input field" name="f_name" ng-model="name" required maxlength="12">				
+				<small class="" ng-if="Myf.f_name.$dirty">
+					<div ng-if="Myf.f_name.$error.required">
+						Không để trống !
+					</div>
+					<div ng-if="Myf.f_name.$error.maxlength">
+						Nhập dưới 12 kí tự !
+					</div>
+				</small>
+			</div>
+			<div class="form-group">
+				<label for="">Email</label>
+				<input type="email" class="form-control" id="" placeholder="Input field" name="f_email" ng-model="email" required name="10">
+				<small class="" ng-if="Myf.f_email.$dirty">
+					<div ng-if="Myf.f_email.$error.required">
+						Không để trống !
+					</div>
+					<div ng-if="Myf.f_email.$error.email">
+						Nhập gmail của bạn theo dạng : (user@gmail.com) !
+					</div>
+				</small>
+			</div>
+			<div class="form-group">
+				<label for="">Mật khẩu</label>
+				<input type="password" class="form-control" id="" placeholder="Input field" name="f_password" ng-model="password" required minlength="8" >
+				<small class="" ng-if="Myf.f_password.$dirty">
+					<div ng-if="Myf.f_password.$error.required">
+						Không để trống !
+					</div>
+					<div ng-if="Myf.f_password.$error.minlength">
+						Nhập mật khẩu hơn 8 kí tự !
+					</div>
+				</small>	
+			</div>
+			<div class="form-group">
+				<label for="">Xác nhận mật khẩu</label>
+				<input type="password" class="form-control" id="" placeholder="Input field" name="f_cfpassword" ng-model="cfpassword" required minlength="8" >
+				<small class="" ng-if="Myf.f_cfpassword.$dirty">
+					<div ng-if="myForm.hasError('notSame')">
+						Không trùng với mật khẩu !
+					</div>					
+				</small>	
+			</div>
+			<div class="form-group">
+				<label for="">Số điện thoại</label>
+				<input type="number" class="form-control" id="" placeholder="Input field" name="f_number" ng-model="number" required minlength="12" required  >
+				<small class="" ng-if="Myf.f_number.$dirty">
+					<div ng-if="Myf.f_password.$error.required">
+						Không để trống !
+					</div>
+					<div ng-if="Myf.f_number.$error.minlength">						
+					</div>
+				</small>	
+			</div>
+			<div class="form-group">
+				<label for="">Ngày sinh</label>
+				<input type="date" class="form-control" id="" placeholder="Input field"  required >					
+			</div>
+			<div class="form-group">
+				<label for="">Quốc gia</label>
+				<select ng-model="country">
+    				<option value="">Chọn quốc gia</option>
+    				<option ng-repeat="country in countries" value="{{country.code}}">{{country.name}}</option>
+				</select>
+				<small class="" ng-if="Myf.f_number.$dirty">
+					<div ng-if="Myf.f_password.$error.required">
+						Không để trống !
+					</div>
+					<div ng-if="Myf.f_number.$error.minlength">						
+					</div>
+				</small>	
+			</div>	
+		<button type="submit" ng-disabled="Myf.f_name.$error.required || Myf.f_name.$error.maxlength || Myf.f_email.$error.required || Myf.f_email.$error.email  || Myf.f_number.$error.minlength || myForm.hasError('notSame') " class="btn btn-primary">Submit</button>
+		</form><br><br><br><br><br><br><br><br><br>
+	</div>

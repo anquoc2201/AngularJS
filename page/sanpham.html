@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo angular JS App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/sanpham.js"></script>    
+</head>
+<div class="container">
+        <div class="row">
+            <hr>
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                          <h3 class="panel-title">
+                              Danh sách sản phẩm
+                            <a href="#modal-cart" data-toggle="modal" class="btn btn-sm btn-danger">View cart</a>
+                          </h3>
+                    </div>
+              </div>
+              <div class="alert alert-success" ng-show="cart">
+                  <strong>Thành công!</strong> thêm sản phẩm <strong>{{cart.name}}</strong> vào giỏ hàng thành công
+              </div>
+            </div>
+            
+            <div class="col-md-3" ng-repeat="sp in products">
+                <div class="thumbnail">
+                    <img ng-src="{{sp.image}}" alt="">
+                    <div class="caption text-center">
+                        <h4>{{sp.name}}</h4>
+                        <p>
+                            <strong>Price: {{sp.price | currency:"":0}} đ</strong>
+                        </p>
+                        <p>                          
+                            <a href="" ng-click="add_to_cart(sp)" class="btn btn-sm btn-default">Add cart</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="modal fade" id="modal-cart">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Thông tin sp</h4>
+                </div>
+                <div class="modal-body">
+                    
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="c in carts">
+                                <td>{{$index + 1}}</td>
+                                <td>
+                                    <img ng-src="{{c.image}}" width="60">
+                                </td>
+                                <td>{{c.name}}</td>
+                                <td>{{c.price | currency:"":0}} đ</td>
+                                <td>{{c.quantity}}</td>
+                                <td>{{c.quantity*c.price | currency:"":0}} đ</td>
+                                <td>
+                                    <a ng-click="remove_cart(c.id)" class="btn btn-sm btn-danger">Remove</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/sanpham.js"></script>
